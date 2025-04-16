@@ -45,10 +45,10 @@ jobs:
           cmake-version: '3.24.0'
 
       - name: Build
-        run: cargo build -vv --all-features
+        run: cargo build -vv --features barretenberg
         
       - name: Test
-        run: cargo test -vv --all-features
+        run: cargo test -vv --features barretenberg
 
       - name: Package barretenberg artifact (linux-x86_64)
         working-directory: target/debug
